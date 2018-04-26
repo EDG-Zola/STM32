@@ -10,6 +10,7 @@
 #include "oled.h"
 #include "sys.h"
 #include "delay.h"
+#include <stdio.h>
 
 //用于数据处理
 #include  <math.h>
@@ -70,12 +71,12 @@ int main(void)
 	float data_CH20 = 0.0;
 	//甲醛数据的各位数
 	uint16_t		dataTemp_CH20=0;
-	uint8_t			data_CH20_bit[4]={0,0,0,0};
+	char			data_CH20_bit[4]={0,0,0,0};
 	uint16_t		dataTemp_CO=0;
 	uint8_t			data_CO_bit[4]={0,0,0,0};
 	//发送数据
 	int k = 0;
-	uint8_t			sendData[12]={0,0,0,0,0,0,0,0,0,0,0,0};
+	uint8_t			sendData[10]={0,0,0,0,0,0,0,0,0,0};
 	
 	/* 初始化 */ 
 	SYSTICK_Config();
@@ -98,7 +99,7 @@ int main(void)
 	OLED_ShowChar(32,2,':',16);//:
 	OLED_ShowCHinese(0,4,10);//甲
 	OLED_ShowCHinese(16,4,11);//醛
-	OLED_ShowChar(32,4,':',16);//:
+	OLED_ShowChar(32,4,':',16);//
 	
 	
 	// 配置串口
@@ -114,6 +115,8 @@ int main(void)
 		ADC_ConvertedValueLocal[0] =(float) ADC_ConvertedValue[0]/4096*5.0;
 //数据处理,将电压值数据转换为浓度数据
 		//处理CO数据
+//		sprintf(data_CO_bit,"%.2f",ADC_ConvertedValueLocal[0]);
+//		OLED_ShowString(40,2,data_CO_bit,16);
 		data_CO = ADC_ConvertedValueLocal[0]*1.104 - 1.478;
 		data_CO =  pow(10, data_CO) * 100;
 		dataTemp_CO = (int) data_CO;
@@ -142,8 +145,6 @@ int main(void)
 		//ADC1通道11（PC1），甲醛的电压值数据
 		ADC_ConvertedValueLocal[1] =(float) ADC_ConvertedValue[1]/4096*5.0;
 		
-		
-		
 		//处理CH20数据
 		data_CH20 = ADC_ConvertedValueLocal[1]*0.627 - 1.095;
 		data_CH20 =  pow(10, data_CH20) * 100;
@@ -152,9 +153,6 @@ int main(void)
 		data_CH20_bit[1]   = dataTemp_CH20/100%10;		//百位数
 		data_CH20_bit[2]   = dataTemp_CH20/10%10;		//十位数
 		data_CH20_bit[3]   = dataTemp_CH20%10; 		//个位数
-		
-			
-		
 		
 		//显示甲醛转换数据	
 		OLED_ShowNum(40,4,data_CH20_bit[0],1,16);
@@ -165,6 +163,25 @@ int main(void)
 		OLED_ShowChar(80,4,'p',16);
 		OLED_ShowChar(88,4,'p',16);
 		OLED_ShowChar(96,4,'m',16);
+		
+		sendData[0] = 'C';
+		sendData[1] = data_CO_bit[0];
+		sendData[2] = data_CO_bit[1];
+		sendData[3] = data_CO_bit[2];
+		sendData[4] = data_CO_bit[3];
+		sendData[5] = 'Q';
+		sendData[6] = data_CH20_bit[0];
+		sendData[7] = data_CH20_bit[1];
+		sendData[8] = data_CH20_bit[2];
+		sendData[9] = data_CH20_bit[3];
+		
+		//发送数据
+		for(k=0;k<10;k++)
+			{
+				 USART_SendData(USART1,sendData[k]);//通过外设USARTx发送单个数据
+				 while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==Bit_RESET);	
+			}
+
 		Delay(0xffffe);	
 	}
 	
@@ -175,11 +192,7 @@ int main(void)
 
 		
 		
-//		for(k=0;k<12;k++)
-//			{
-//				 USART_SendData(USART1,sendData[k]);//通过外设USARTx发送单个数据
-//				 while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==Bit_RESET);	
-//			}
+
 				 
 }
 /*********************************************END OF FILE**********************/
