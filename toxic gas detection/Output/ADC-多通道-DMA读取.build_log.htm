@@ -1,0 +1,86 @@
+<html>
+<body>
+<pre>
+<h1>礦ision Build Log</h1>
+<h2>Tool Versions:</h2>
+IDE-Version: μVision V5.15
+Copyright (C) 2015 ARM Ltd and ARM Germany GmbH. All rights reserved.
+License Information: zw AutoBVT, Microsoft, LIC=LSNJJ-UR47J-V13P8-3M93J-XTR5L-WL3CM
+ 
+Tool Versions:
+Toolchain:       MDK-ARM Standard  Version: 5.15.0
+Toolchain Path:  D:\stm32MDK\ARM\ARMCC\Bin
+C Compiler:      Armcc.exe V5.05 update 2 (build 169)
+Assembler:       Armasm.exe V5.05 update 2 (build 169)
+Linker/Locator:  ArmLink.exe V5.05 update 2 (build 169)
+Library Manager: ArmAr.exe V5.05 update 2 (build 169)
+Hex Converter:   FromElf.exe V5.05 update 2 (build 169)
+CPU DLL:         SARMCM3.DLL V5.15.0
+Dialog DLL:      DARMSTM.DLL V1.65.0.0
+Target DLL:      Segger\JL2CM3.dll V2.99.15.0
+Dialog DLL:      TARMSTM.DLL V1.64.0.0
+ 
+<h2>Project:</h2>
+E:\研一下\毕设\程序\3-ADC—多通道（DMA读取）\Project\RVMDK（uv5）\BH-F103.uvprojx
+Project File Date:  04/26/2018
+
+<h2>Output:</h2>
+*** Using Compiler 'V5.05 update 2 (build 169)', folder: 'D:\stm32MDK\ARM\ARMCC\Bin'
+Build target 'ADC-多通道-DMA读取'
+compiling main.c...
+..\..\User\sys\sys.h(46): warning:  #47-D: incompatible redefinition of macro "PAout" (declared at line 32 of "..\..\User\system\system.h")
+  #define PAout(n)   BIT_ADDR(GPIOA_ODR_Addr,n)  //?涑? 
+..\..\User\sys\sys.h(47): warning:  #47-D: incompatible redefinition of macro "PAin" (declared at line 41 of "..\..\User\system\system.h")
+  #define PAin(n)    BIT_ADDR(GPIOA_IDR_Addr,n)  //???? 
+..\..\User\sys\sys.h(49): warning:  #47-D: incompatible redefinition of macro "PBout" (declared at line 33 of "..\..\User\system\system.h")
+  #define PBout(n)   BIT_ADDR(GPIOB_ODR_Addr,n)  //?涑? 
+..\..\User\sys\sys.h(50): warning:  #47-D: incompatible redefinition of macro "PBin" (declared at line 42 of "..\..\User\system\system.h")
+  #define PBin(n)    BIT_ADDR(GPIOB_IDR_Addr,n)  //???? 
+..\..\User\sys\sys.h(52): warning:  #47-D: incompatible redefinition of macro "PCout" (declared at line 34 of "..\..\User\system\system.h")
+  #define PCout(n)   BIT_ADDR(GPIOC_ODR_Addr,n)  //?涑? 
+..\..\User\sys\sys.h(53): warning:  #47-D: incompatible redefinition of macro "PCin" (declared at line 43 of "..\..\User\system\system.h")
+  #define PCin(n)    BIT_ADDR(GPIOC_IDR_Addr,n)  //???? 
+..\..\User\sys\sys.h(55): warning:  #47-D: incompatible redefinition of macro "PDout" (declared at line 35 of "..\..\User\system\system.h")
+  #define PDout(n)   BIT_ADDR(GPIOD_ODR_Addr,n)  //?涑? 
+..\..\User\sys\sys.h(56): warning:  #47-D: incompatible redefinition of macro "PDin" (declared at line 44 of "..\..\User\system\system.h")
+  #define PDin(n)    BIT_ADDR(GPIOD_IDR_Addr,n)  //???? 
+..\..\User\sys\sys.h(58): warning:  #47-D: incompatible redefinition of macro "PEout" (declared at line 36 of "..\..\User\system\system.h")
+  #define PEout(n)   BIT_ADDR(GPIOE_ODR_Addr,n)  //?涑? 
+..\..\User\sys\sys.h(59): warning:  #47-D: incompatible redefinition of macro "PEin" (declared at line 45 of "..\..\User\system\system.h")
+  #define PEin(n)    BIT_ADDR(GPIOE_IDR_Addr,n)  //????
+..\..\User\sys\sys.h(61): warning:  #47-D: incompatible redefinition of macro "PFout" (declared at line 37 of "..\..\User\system\system.h")
+  #define PFout(n)   BIT_ADDR(GPIOF_ODR_Addr,n)  //?涑? 
+..\..\User\sys\sys.h(62): warning:  #47-D: incompatible redefinition of macro "PFin" (declared at line 46 of "..\..\User\system\system.h")
+  #define PFin(n)    BIT_ADDR(GPIOF_IDR_Addr,n)  //????
+..\..\User\sys\sys.h(64): warning:  #47-D: incompatible redefinition of macro "PGout" (declared at line 38 of "..\..\User\system\system.h")
+  #define PGout(n)   BIT_ADDR(GPIOG_ODR_Addr,n)  //?涑? 
+..\..\User\sys\sys.h(65): warning:  #47-D: incompatible redefinition of macro "PGin" (declared at line 47 of "..\..\User\system\system.h")
+  #define PGin(n)    BIT_ADDR(GPIOG_IDR_Addr,n)  //????
+..\..\User\oled\oled.h(65): warning:  #1295-D: Deprecated declaration Picture - give arg types
+  void Picture();
+..\..\User\oled\oled.h(66): warning:  #1295-D: Deprecated declaration IIC_Start - give arg types
+  void IIC_Start();
+..\..\User\oled\oled.h(67): warning:  #1295-D: Deprecated declaration IIC_Stop - give arg types
+  void IIC_Stop();
+..\..\User\oled\oled.h(72): warning:  #1295-D: Deprecated declaration IIC_Wait_Ack - give arg types
+  void IIC_Wait_Ack();
+..\..\User\main.c(46): warning:  #69-D: integer conversion resulted in truncation
+                delay_ms(80000);
+..\..\User\main.c(77): warning:  #177-D: variable "k" was declared but never referenced
+        int k = 0;
+..\..\User\main.c(78): warning:  #177-D: variable "sendData" was declared but never referenced
+        uint8_t                 sendData[12]={0,0,0,0,0,0,0,0,0,0,0,0};
+..\..\User\main.c: 21 warnings, 0 errors
+linking...
+Program Size: Code=14024 RO-data=2552 RW-data=828 ZI-data=1028  
+FromELF: creating hex file...
+"..\..\Output\ADC-多通道-DMA读取.axf" - 0 Error(s), 21 Warning(s).
+
+<h2>Collection of Component include folders:</h2>
+  E:\研一下\毕设\程序\3-ADC—多通道（DMA读取）\Project\RVMDK（uv5）\RTE
+  D:\stm32MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include
+
+<h2>Collection of Component Files used:</h2>
+</pre>
+</body>
+</html>
