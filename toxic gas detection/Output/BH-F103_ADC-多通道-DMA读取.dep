@@ -701,7 +701,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_spi.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x57E62C77)
-F (..\..\User\main.c)(0x5AE1EC9C)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\Libraries\CMSIS -I..\..\User -I..\..\Libraries\FWlib\inc -I..\..\User\usart -I..\..\User\adc -I..\..\User\adx345 -I..\..\User\delay -I..\..\User\iic -I..\..\User\oled -I..\..\User\sys -I..\..\User\system -I..\..\User\SysTick-I E:\研一下\毕设\程序\3-ADC—多通道（DMA读取）\Project\RVMDK（uv5）\RTE-I D:\stm32MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-I D:\stm32MDK\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
+F (..\..\User\main.c)(0x5AE60F56)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\Libraries\CMSIS -I..\..\User -I..\..\Libraries\FWlib\inc -I..\..\User\usart -I..\..\User\adc -I..\..\User\adx345 -I..\..\User\delay -I..\..\User\iic -I..\..\User\oled -I..\..\User\sys -I..\..\User\system -I..\..\User\SysTick-I E:\研一下\毕设\程序\3-ADC—多通道（DMA读取）\Project\RVMDK（uv5）\RTE-I D:\stm32MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-I D:\stm32MDK\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\main.o --omf_browse ..\..\output\main.crf --depend ..\..\output\main.d)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x57E62C77)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x57E62C77)
 I (D:\stm32MDK\ARM\ARMCC\include\stdint.h)(0x54C245B8)
@@ -730,7 +730,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_tim.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x57E62C77)
-I (..\..\User\usart\bsp_usart.h)(0x57E62C77)
+I (..\..\User\usart\bsp_usart.h)(0x5AE6026B)
 I (D:\stm32MDK\ARM\ARMCC\include\stdio.h)(0x54C245B8)
 I (..\..\User\adc\bsp_adc.h)(0x5AE0BA5A)
 I (..\..\User\system\system.h)(0x5317EC98)
@@ -803,7 +803,7 @@ I (..\..\Libraries\FWlib\inc\stm32f10x_usart.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\stm32f10x_wwdg.h)(0x57E62C77)
 I (..\..\Libraries\FWlib\inc\misc.h)(0x57E62C77)
 F (..\..\User\usart\bsp_usart.c)(0x57E62C77)(-c --cpu Cortex-M3 -D__MICROLIB -g -O0 --apcs=interwork -I..\..\Libraries\CMSIS -I..\..\User -I..\..\Libraries\FWlib\inc -I..\..\User\usart -I..\..\User\adc -I..\..\User\adx345 -I..\..\User\delay -I..\..\User\iic -I..\..\User\oled -I..\..\User\sys -I..\..\User\system -I..\..\User\SysTick-I E:\研一下\毕设\程序\3-ADC—多通道（DMA读取）\Project\RVMDK（uv5）\RTE-I D:\stm32MDK\ARM\PACK\Keil\STM32F1xx_DFP\2.2.0\Device\Include-I D:\stm32MDK\ARM\CMSIS\Include-D__UVISION_VERSION="515" -DSTM32F10X_HD -DSTM32F10X_HD -DUSE_STDPERIPH_DRIVER-o ..\..\output\bsp_usart.o --omf_browse ..\..\output\bsp_usart.crf --depend ..\..\output\bsp_usart.d)
-I (..\..\User\usart\bsp_usart.h)(0x57E62C77)
+I (..\..\User\usart\bsp_usart.h)(0x5AE6026B)
 I (..\..\Libraries\CMSIS\stm32f10x.h)(0x57E62C77)
 I (..\..\Libraries\CMSIS\core_cm3.h)(0x57E62C77)
 I (D:\stm32MDK\ARM\ARMCC\include\stdint.h)(0x54C245B8)

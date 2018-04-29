@@ -71,12 +71,12 @@ int main(void)
 	float data_CH20 = 0.0;
 	//甲醛数据的各位数
 	uint16_t		dataTemp_CH20=0;
-	char			data_CH20_bit[4]={0,0,0,0};
+	uint16_t			data_CH20_bit[4]={0,0,0,0};
 	uint16_t		dataTemp_CO=0;
-	uint8_t			data_CO_bit[4]={0,0,0,0};
+	uint16_t			data_CO_bit[4]={0,0,0,0};
 	//发送数据
 	int k = 0;
-	uint8_t			sendData[10]={0,0,0,0,0,0,0,0,0,0};
+	uint16_t			sendData[26]={0};
 	
 	/* 初始化 */ 
 	SYSTICK_Config();
@@ -164,19 +164,36 @@ int main(void)
 		OLED_ShowChar(88,4,'p',16);
 		OLED_ShowChar(96,4,'m',16);
 		
+		//发送数据格式,整型数据要转换为字符型数据，只需要+'0'即可
 		sendData[0] = 'C';
-		sendData[1] = data_CO_bit[0];
-		sendData[2] = data_CO_bit[1];
-		sendData[3] = data_CO_bit[2];
-		sendData[4] = data_CO_bit[3];
-		sendData[5] = 'Q';
-		sendData[6] = data_CH20_bit[0];
-		sendData[7] = data_CH20_bit[1];
-		sendData[8] = data_CH20_bit[2];
-		sendData[9] = data_CH20_bit[3];
+		sendData[1] = 'O';
+		sendData[2] = ':';
+		sendData[3] = data_CO_bit[0]+'0';
+		sendData[4] = data_CO_bit[1]+'0';
+		sendData[5] = '.';
+		sendData[6] = data_CO_bit[2]+'0';
+		sendData[7] = data_CO_bit[3]+'0';
+		sendData[8] = 'p';
+		sendData[9] = 'p';
+		sendData[10] = 'm';
+		sendData[11] = '\n';
+		sendData[12] = 'C';
+		sendData[13] = 'H';
+		sendData[14] = '2';
+		sendData[15] = 'O';
+		sendData[16] = ':';
+		sendData[17] = data_CH20_bit[0]+'0';
+		sendData[18] = data_CH20_bit[1]+'0';
+		sendData[19] = '.';
+		sendData[20] = data_CH20_bit[2]+'0';
+		sendData[21] = data_CH20_bit[3]+'0';
+		sendData[22] = 'p';
+		sendData[23] = 'p';
+		sendData[24] = 'm';
+		sendData[25] = '\n';
 		
 		//发送数据
-		for(k=0;k<10;k++)
+		for(k=0;k<26;k++)
 			{
 				 USART_SendData(USART1,sendData[k]);//通过外设USARTx发送单个数据
 				 while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==Bit_RESET);	
