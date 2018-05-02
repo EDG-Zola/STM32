@@ -76,7 +76,7 @@ int main(void)
 	uint16_t			data_CO_bit[4]={0,0,0,0};
 	//发送数据
 	int k = 0;
-	uint16_t			sendData[26]={0};
+	uint16_t			sendData[20]={0};
 	
 	/* 初始化 */ 
 	SYSTICK_Config();
@@ -166,34 +166,28 @@ int main(void)
 		
 		//发送数据格式,整型数据要转换为字符型数据，只需要+'0'即可
 		sendData[0] = 'C';
-		sendData[1] = 'O';
+		sendData[1] = '5';
 		sendData[2] = ':';
 		sendData[3] = data_CO_bit[0]+'0';
 		sendData[4] = data_CO_bit[1]+'0';
 		sendData[5] = '.';
 		sendData[6] = data_CO_bit[2]+'0';
 		sendData[7] = data_CO_bit[3]+'0';
-		sendData[8] = 'p';
-		sendData[9] = 'p';
-		sendData[10] = 'm';
-		sendData[11] = '\n';
-		sendData[12] = 'C';
-		sendData[13] = 'H';
-		sendData[14] = '2';
-		sendData[15] = 'O';
-		sendData[16] = ':';
-		sendData[17] = data_CH20_bit[0]+'0';
-		sendData[18] = data_CH20_bit[1]+'0';
-		sendData[19] = '.';
-		sendData[20] = data_CH20_bit[2]+'0';
-		sendData[21] = data_CH20_bit[3]+'0';
-		sendData[22] = 'p';
-		sendData[23] = 'p';
-		sendData[24] = 'm';
-		sendData[25] = '\n';
+		sendData[8] = ' ';
+		sendData[9] = ' ';
+		sendData[10] = 'C';
+		sendData[11] = '6';
+		sendData[12] = ':';
+		sendData[13] = data_CH20_bit[0]+'0';
+		sendData[14] = data_CH20_bit[1]+'0';
+		sendData[15] = '.';
+		sendData[16] = data_CH20_bit[2]+'0';
+		sendData[17] = data_CH20_bit[3]+'0';
+		sendData[18] = ' ';
+		sendData[19] = ' ';
 		
 		//发送数据
-		for(k=0;k<26;k++)
+		for(k=0;k<20;k++)
 			{
 				 USART_SendData(USART1,sendData[k]);//通过外设USARTx发送单个数据
 				 while(USART_GetFlagStatus(USART1,USART_FLAG_TXE)==Bit_RESET);	
