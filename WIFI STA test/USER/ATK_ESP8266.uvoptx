@@ -143,6 +143,10 @@
       <TargetDriverDllRegistry>
         <SetRegEntry>
           <Number>0</Number>
+          <Key>DLGUARM</Key>
+        </SetRegEntry>
+        <SetRegEntry>
+          <Number>0</Number>
           <Key>ARMRTXEVENTFLAGS</Key>
           <Name>-L70 -Z18 -C0 -M0 -T1</Name>
         </SetRegEntry>
@@ -155,10 +159,6 @@
           <Number>0</Number>
           <Key>ARMDBGFLAGS</Key>
           <Name></Name>
-        </SetRegEntry>
-        <SetRegEntry>
-          <Number>0</Number>
-          <Key>DLGUARM</Key>
         </SetRegEntry>
         <SetRegEntry>
           <Number>0</Number>
@@ -175,25 +175,25 @@
         <Bp>
           <Number>0</Number>
           <Type>0</Type>
-          <LineNumber>499</LineNumber>
+          <LineNumber>197</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134239176</Address>
+          <Address>134240792</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
           <SizeOfObject>0</SizeOfObject>
           <BreakByAccess>0</BreakByAccess>
           <BreakIfRCount>1</BreakIfRCount>
-          <Filename>E:\鐮斾竴涓?WiFi\锛堝簱鍑芥暟鐗堟湰锛岄€傚悎鎴樿埌V3鍜岀簿鑻盨TM32寮€鍙戞澘锛夋墿灞曞疄楠?3 ATK-ESP8266 WIFI妯″潡娴嬭瘯瀹為獙\ATK-ESP8266\common.c</Filename>
+          <Filename>E:\鐮斾竴涓?WiFi\锛堝簱鍑芥暟鐗堟湰锛岄€傚悎鎴樿埌V3鍜岀簿鑻盨TM32寮€鍙戞澘锛夋墿灞曞疄楠?3 ATK-ESP8266 WIFI妯″潡娴嬭瘯瀹為獙\ATK-ESP8266\wifista.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\ATK_ESP8266\../ATK-ESP8266/common.c\499</Expression>
+          <Expression>\\ATK_ESP8266\../ATK-ESP8266/wifista.c\197</Expression>
         </Bp>
         <Bp>
           <Number>1</Number>
           <Type>0</Type>
-          <LineNumber>34</LineNumber>
+          <LineNumber>104</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240724</Address>
+          <Address>134240562</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -202,30 +202,14 @@
           <BreakIfRCount>1</BreakIfRCount>
           <Filename>E:\鐮斾竴涓?WiFi\锛堝簱鍑芥暟鐗堟湰锛岄€傚悎鎴樿埌V3鍜岀簿鑻盨TM32寮€鍙戞澘锛夋墿灞曞疄楠?3 ATK-ESP8266 WIFI妯″潡娴嬭瘯瀹為獙\ATK-ESP8266\wifista.c</Filename>
           <ExecCommand></ExecCommand>
-          <Expression>\\ATK_ESP8266\../ATK-ESP8266/wifista.c\34</Expression>
+          <Expression>\\ATK_ESP8266\../ATK-ESP8266/wifista.c\104</Expression>
         </Bp>
         <Bp>
           <Number>2</Number>
           <Type>0</Type>
-          <LineNumber>42</LineNumber>
-          <EnabledFlag>1</EnabledFlag>
-          <Address>134240768</Address>
-          <ByteObject>0</ByteObject>
-          <HtxType>0</HtxType>
-          <ManyObjects>0</ManyObjects>
-          <SizeOfObject>0</SizeOfObject>
-          <BreakByAccess>0</BreakByAccess>
-          <BreakIfRCount>1</BreakIfRCount>
-          <Filename>E:\鐮斾竴涓?WiFi\锛堝簱鍑芥暟鐗堟湰锛岄€傚悎鎴樿埌V3鍜岀簿鑻盨TM32寮€鍙戞澘锛夋墿灞曞疄楠?3 ATK-ESP8266 WIFI妯″潡娴嬭瘯瀹為獙\ATK-ESP8266\wifista.c</Filename>
-          <ExecCommand></ExecCommand>
-          <Expression>\\ATK_ESP8266\../ATK-ESP8266/wifista.c\42</Expression>
-        </Bp>
-        <Bp>
-          <Number>3</Number>
-          <Type>0</Type>
           <LineNumber>45</LineNumber>
           <EnabledFlag>1</EnabledFlag>
-          <Address>134240784</Address>
+          <Address>134240296</Address>
           <ByteObject>0</ByteObject>
           <HtxType>0</HtxType>
           <ManyObjects>0</ManyObjects>
@@ -235,6 +219,22 @@
           <Filename>E:\鐮斾竴涓?WiFi\锛堝簱鍑芥暟鐗堟湰锛岄€傚悎鎴樿埌V3鍜岀簿鑻盨TM32寮€鍙戞澘锛夋墿灞曞疄楠?3 ATK-ESP8266 WIFI妯″潡娴嬭瘯瀹為獙\ATK-ESP8266\wifista.c</Filename>
           <ExecCommand></ExecCommand>
           <Expression>\\ATK_ESP8266\../ATK-ESP8266/wifista.c\45</Expression>
+        </Bp>
+        <Bp>
+          <Number>3</Number>
+          <Type>0</Type>
+          <LineNumber>34</LineNumber>
+          <EnabledFlag>1</EnabledFlag>
+          <Address>134240236</Address>
+          <ByteObject>0</ByteObject>
+          <HtxType>0</HtxType>
+          <ManyObjects>0</ManyObjects>
+          <SizeOfObject>0</SizeOfObject>
+          <BreakByAccess>0</BreakByAccess>
+          <BreakIfRCount>1</BreakIfRCount>
+          <Filename>E:\鐮斾竴涓?WiFi\锛堝簱鍑芥暟鐗堟湰锛岄€傚悎鎴樿埌V3鍜岀簿鑻盨TM32寮€鍙戞澘锛夋墿灞曞疄楠?3 ATK-ESP8266 WIFI妯″潡娴嬭瘯瀹為獙\ATK-ESP8266\wifista.c</Filename>
+          <ExecCommand></ExecCommand>
+          <Expression>\\ATK_ESP8266\../ATK-ESP8266/wifista.c\34</Expression>
         </Bp>
       </Breakpoint>
       <WatchWindow1>
@@ -272,6 +272,11 @@
           <count>6</count>
           <WinNumber>1</WinNumber>
           <ItemText>portnum</ItemText>
+        </Ww>
+        <Ww>
+          <count>7</count>
+          <WinNumber>1</WinNumber>
+          <ItemText>t</ItemText>
         </Ww>
       </WatchWindow1>
       <Tracepoint>

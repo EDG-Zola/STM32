@@ -16,10 +16,10 @@
 //用户配置区
 
 //连接端口号:8086,可自行修改为其他端口.
-const u8* portnum="8086";		 
+const u8* portnum="8080";		 
 
 //WIFI STA模式,设置要去连接的路由器无线参数,请根据你自己的路由器设置,自行修改.
-const u8* wifista_ssid="CQUPTWTR";			//路由器SSID号
+const u8* wifista_ssid="A12345";			//路由器SSID号
 const u8* wifista_encryption="wpawpa2_aes";	//wpa/wpa2 aes加密方式
 const u8* wifista_password="12345678"; 	//连接密码
 
@@ -481,20 +481,20 @@ u8 atk_8266_ip_set(u8* title,u8* mode,u8* port,u8* ip)
 	ip[0]=0;
 	
 	/********************************输入电脑端ip地址*************************/
-	//ip="10.210.167.29";
+	//ip="10.81.194.76";
 	ip[iplen++]=kbd_tbl[1-1][0];		//1
-	ip[iplen++]=kbd_tbl[11-1][0];		//0
-	ip[iplen++]=kbd_tbl[10-1][0];		//.
-	ip[iplen++]=kbd_tbl[2-1][0];		//2
+	ip[iplen++]=kbd_tbl[11-1][0];		//9
+	ip[iplen++]=kbd_tbl[10-1][0];		//2
+	ip[iplen++]=kbd_tbl[8-1][0];		//.
 	ip[iplen++]=kbd_tbl[1-1][0];		//1
-	ip[iplen++]=kbd_tbl[11-1][0];		//0
-	ip[iplen++]=kbd_tbl[10-1][0];		//.
-	ip[iplen++]=kbd_tbl[1-1][0];		//1
-	ip[iplen++]=kbd_tbl[6-1][0];		//6
-	ip[iplen++]=kbd_tbl[7-1][0];		//7
-	ip[iplen++]=kbd_tbl[10-1][0];		//.
-	ip[iplen++]=kbd_tbl[2-1][0];		//2
-	ip[iplen++]=kbd_tbl[9-1][0];		//9
+	ip[iplen++]=kbd_tbl[10-1][0];		//6
+	ip[iplen++]=kbd_tbl[1-1][0];		//8
+	ip[iplen++]=kbd_tbl[9-1][0];		//.
+	ip[iplen++]=kbd_tbl[4-1][0];		//1
+	ip[iplen++]=kbd_tbl[10-1][0];		//5
+	ip[iplen++]=kbd_tbl[7-1][0];		//5
+	ip[iplen++]=kbd_tbl[6-1][0];		//.
+//	ip[iplen++]=kbd_tbl[1-1][0];		//1
 	key=14;
 	if(key==14&&iplen)
 		ip[iplen]=0;
@@ -584,7 +584,7 @@ void atk_8266_test(void)
 	} 
 	while(atk_8266_send_cmd("ATE0","OK",20));//关闭回显
 	
-	atk_8266_mtest_ui(32,30);//连接成功，进入测试界面，即将按下KEY1，选择STA模式
+	//atk_8266_mtest_ui(32,30);//连接成功，进入测试界面，即将按下KEY1，选择STA模式
 	
 	while(1)
 	{
